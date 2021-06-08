@@ -2,6 +2,10 @@
 @import './reset';
 
 main {
-  padding: 20px;
-  color: #ddd;
+  padding: 15px;
+}
+.title {
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }

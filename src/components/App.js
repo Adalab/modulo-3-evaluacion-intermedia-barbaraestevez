@@ -1,24 +1,16 @@
-import React, { useState } from 'react';
-import '../stylesheets/App.scss';
+import React, { useState } from "react";
+import "../stylesheets/App.scss";
+import data from "../data/data.json";
+import PokeList from "./PokeList";
 
-const App = () => {
-  const [name, setName] = useState('Elena'); // Correcto ✅
-  const [counter, setCounter] = useState(0) // Incorrecto ❌
-  
+function App() {
+  const [pokemonData] = useState(data);
   return (
     <div>
-      <p>Mi nombre es: {name}</p></div>
+      <h1 className="title">Mi lista de pokemon</h1>
+      <PokeList pokemons={pokemonData} />
+    </div>
   );
 }
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <main>Escribe aquí tu HTML...</main>
-//     </div>
-//   );
-// }
-
 
 export default App;
